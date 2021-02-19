@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "NODE_ENV=production nodemon -e js,pug ./bin/www",
-    "test": "NODE_ENV=sandbox nodemon -e js,pug ./bin/www",
+    "test": "NODE_ENV=production nodemon -e js,pug ./bin/www",
     "seed": "NODE_ENV=sandbox node ./bin/script/seed-catalog.js generate",
     "clear": "NODE_ENV=sandbox node ./bin/script/seed-catalog.js clear",
     "help": "NODE_ENV=sandbox node ./bin/script/seed-catalog.js --help"
@@ -23,6 +23,7 @@
     "square": "^8.0.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "nodemon": "^1.19.0"
   }
 }
